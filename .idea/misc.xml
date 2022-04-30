@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-anydpi/ic_menu.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/custom_toolbar.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/app_bar_home.xml" value="0.19010416666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/content_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_categories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_gallery.xml" value="0.19010416666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_home.xml" value="0.19010416666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_new_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_news.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_settings.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_slideshow.xml" value="0.19010416666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/left_side_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/nav_header_home.xml" value="0.19010416666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/new_toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/news_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/right_side_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/test.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/search_bar.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
