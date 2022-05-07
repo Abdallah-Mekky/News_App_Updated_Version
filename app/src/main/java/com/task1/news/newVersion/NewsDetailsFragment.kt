@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.task1.news.Model.ArticlesItem
 import com.task1.news.R
 import com.task1.news.newVersion.ui.NewsFragment
 import com.task1.news.newVersion.ui.NewsFragment.Companion.items

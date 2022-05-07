@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
-import android.widget.SearchView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -31,6 +30,7 @@ class NewsFragment() : Fragment() {
     companion object {
 
         var items: ArticlesItem? = null
+        var tagg: SourcesItem? = null
         fun getInstance(category: category): NewsFragment {
 
             var fragment = NewsFragment()
@@ -43,7 +43,14 @@ class NewsFragment() : Fragment() {
 
 
     lateinit var category: category
-    lateinit var searchView:androidx.appcompat.widget.SearchView
+    lateinit var tapLayout: TabLayout
+    lateinit var progressBarSourses: ProgressBar
+    lateinit var newsProgressBar: ProgressBar
+    lateinit var newsRecyclerView: RecyclerView
+    lateinit var newsAdapter: NewsAdapter
+    lateinit var newsDetailsFragment: NewsDetailsFragment
+    lateinit var search: androidx.appcompat.widget.SearchView
+    lateinit var name: TextView
 
 
     override fun onCreateView(
@@ -55,20 +62,14 @@ class NewsFragment() : Fragment() {
         return inflater.inflate(R.layout.fragment_news, container, false)
     }
 
-    lateinit var tapLayout: TabLayout
-    lateinit var progressBarSourses: ProgressBar
-    lateinit var newsProgressBar: ProgressBar
-    lateinit var newsRecyclerView: RecyclerView
-    lateinit var newsAdapter: NewsAdapter
-    lateinit var newsDetailsFragment: NewsDetailsFragment
-    lateinit var search: SearchView
+
+    override fun onStop() {
+        super.onStop()
+        search.isVisible = false
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        //search = view.findViewById(R.id.search)
-
-        //search.isVisible = true
 
 
         initViews()
@@ -91,23 +92,58 @@ class NewsFragment() : Fragment() {
 
         }
 
+        search.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                getNewsBySource(tagg, query!!.lowercase())
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                getNewsBySource(tagg, newText!!.lowercase())
+                return true
+            }
+
+
+        })
+
 
     }
 
 
     fun initViews() {
 
-        tapLayout = requireView().findViewById(R.id.tabLayout)
-        progressBarSourses = requireView().findViewById(R.id.progressBarSourses)
-        newsRecyclerView = requireView().findViewById(R.id.newsRecyclerView)
-        newsProgressBar = requireView().findViewById(R.id.newsProgressBar)
+        tapLayout = requireActivity().findViewById(R.id.tabLayout)
+        progressBarSourses = requireActivity().findViewById(R.id.progressBarSourses)
+        newsRecyclerView = requireActivity().findViewById(R.id.newsRecyclerView)
+        newsProgressBar = requireActivity().findViewById(R.id.newsProgressBar)
         newsAdapter = NewsAdapter(null)
         newsRecyclerView.adapter = newsAdapter
-        searchView = requireView().findViewById(R.id.SearchView)
+        search = requireActivity().findViewById(R.id.abd)
+        name = requireActivity().findViewById(R.id.category_name)
 
-        if(activity == NewsFragment::class.java){
-            searchView?.isVisible = true }
+        controlSearchView()
 
+
+    }
+
+
+    fun controlSearchView() {
+
+        search.isVisible = true
+
+        search.setOnSearchClickListener {
+            name.text = null
+        }
+
+        search.setOnCloseListener(SearchView.OnCloseListener {
+
+            name.text = "News App"
+            getNewsBySource(tagg, null)
+
+            return@OnCloseListener false
+        })
 
     }
 
@@ -151,8 +187,9 @@ class NewsFragment() : Fragment() {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 newsProgressBar.isVisible = false
                 val sourceClicked = tab?.tag as SourcesItem
+                tagg = sourceClicked
 
-                getNewsBySource(sourceClicked)
+                getNewsBySource(sourceClicked, "")
 
             }
 
@@ -164,8 +201,9 @@ class NewsFragment() : Fragment() {
 
                 newsProgressBar.isVisible = false
                 val sourceClicked = tab?.tag as SourcesItem
+                tagg = sourceClicked
 
-                getNewsBySource(sourceClicked)
+                getNewsBySource(sourceClicked, "")
             }
 
         })
@@ -173,9 +211,9 @@ class NewsFragment() : Fragment() {
         tapLayout.getTabAt(0)?.select()
     }
 
-    fun getNewsBySource(sourceClicked: SourcesItem) {
+    fun getNewsBySource(sourceClicked: SourcesItem?, query: String?) {
 
-        ApiManager.getApis().getNewsBySource(Constants.apiKey, sourceClicked.id ?: "")
+        ApiManager.getApis().getNewsBySource(Constants.apiKey, sourceClicked?.id ?: "", query ?: "")
             .enqueue(object : Callback<NewsResponse> {
                 override fun onResponse(
                     call: Call<NewsResponse>,

@@ -18,6 +18,9 @@ interface WepServices {
     @GET("v2/everything")
     fun getNewsBySource(
         @Query("apiKey") key: String,
-        @Query("sources") source: String
+        @Query("sources") source: String,
+        @Query("q") query: String
     ): Call<NewsResponse>
+
+
 }

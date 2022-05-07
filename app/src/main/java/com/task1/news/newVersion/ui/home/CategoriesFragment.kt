@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.task1.news.R
@@ -19,7 +17,6 @@ class CategoriesFragment() : Fragment() {
     lateinit var categories_RecyclerView: RecyclerView
     lateinit var categories_Adapter: CategoryAdapter
     lateinit var category: List<category>
-    lateinit var searchView:androidx.appcompat.widget.SearchView
 
 
     override fun onCreateView(
@@ -36,7 +33,6 @@ class CategoriesFragment() : Fragment() {
 
         categories_RecyclerView = view.findViewById(R.id.categories_RecyclerView)
 
-
         createCategoryList()
 
         categories_Adapter = CategoryAdapter(category)
@@ -50,23 +46,12 @@ class CategoriesFragment() : Fragment() {
             }
 
         }
-
-        //searchView = view.findViewById(R.id.SearchView)
-
-
-        //  if(activity == CategoriesFragment::class.java){
-        //searchView?.isVisible = false// }
     }
 
     private fun createCategoryList() {
 
         category = listOf(
-            com.task1.news.newVersion.ui.category(
-                "sports",
-                R.drawable.sports,
-                "Sports",
-                R.color.sports_Category
-            ),
+            category("sports", R.drawable.sports, "Sports", R.color.sports_Category),
             category("technology", R.drawable.politics, "Technology", R.color.technology_Category),
             category("health", R.drawable.health, "Health", R.color.health_Category),
             category("business", R.drawable.bussines, "Business", R.color.business_Category),

@@ -3,12 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-anydpi/ic_clear_text.xml" value="0.2203125" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-anydpi/ic_menu.xml" value="0.2203125" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable-v24/tab_shape_unselected.xml" value="0.2203125" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/custom_toolbar.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2203125" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/ic_splash.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/side_nav_bar.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/sp.xml" value="0.22864583333333333" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/tab_shape_selected.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/tab_shape_unselected.xml" value="0.2203125" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/drawable/tablayout_selector.xml" value="0.2203125" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/app_bar_home.xml" value="0.19010416666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/content_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/fragment_categories.xml" value="0.20416666666666666" />
@@ -23,12 +35,17 @@
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/new_toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/news_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/right_side_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/splash.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/layout/test.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/home.xml" value="0.20416666666666666" />
         <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/menu/search_bar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Route_Android_Diploma/AndroidTasks/News/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

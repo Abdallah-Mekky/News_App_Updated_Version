@@ -16,11 +16,9 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            style="@style/Theme.News.AppBarOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/custom_toolbar"
-            >
+            android:background="@drawable/custom_toolbar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -28,15 +26,15 @@
 
 
                 <androidx.appcompat.widget.SearchView
-                    android:id="@+id/SearchView"
-                    android:visibility="invisible"
+                    android:id="@+id/abd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="invisible"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:queryHint="Write To Search"
-                    />
+                    app:queryHint="Write To Search" />
 
                 <ImageView
                     android:id="@+id/ic_menu"
@@ -54,6 +52,7 @@
                     android:text="News App"
                     android:textColor="@color/white"
                     android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
