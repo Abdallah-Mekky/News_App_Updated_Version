@@ -9,6 +9,5 @@
             android:icon="@drawable/ic_categories"
             android:title="Categories" />
 
-
     </group>
 </menu>

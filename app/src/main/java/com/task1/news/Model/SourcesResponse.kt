@@ -1,4 +1,4 @@
-package com.task1.news.Model
+package com.task1.news.model
 
 import com.google.gson.annotations.SerializedName
 

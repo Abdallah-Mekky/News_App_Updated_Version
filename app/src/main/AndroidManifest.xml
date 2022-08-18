@@ -13,7 +13,7 @@
         android:theme="@style/Theme.News">
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".Splash.SplashActivity"
             android:exported="true"
             android:theme="@style/splashScreen">
             <intent-filter>
@@ -25,9 +25,8 @@
 
 
         <activity
-            android:name=".newVersion.HomeActivity"
-            android:exported="false"
-            >
+            android:name=".Home.HomeActivity"
+            android:exported="false">
 
         </activity>
     </application>
