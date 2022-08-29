@@ -24,6 +24,7 @@ https://user-images.githubusercontent.com/80880411/187102119-69377f7c-fcab-4653-
 # Tools
 * [Kotlin](https://kotlinlang.org/) 
 * [Glide](https://github.com/bumptech/glide) - Glide is a fast and efficient open source media management and image loading framework for Android.
+* [Google gson](https://github.com/google/gson) - For parsing JSON data.
 * [View Model](https://bit.ly/3e43P79) - The View Model class is designed to store and manage UI-related data in a lifecycle conscious way.
 * [Live Data](https://bit.ly/3KuahQR) - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services.
 * [Data Binding](https://bit.ly/3PVsjNc) - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
