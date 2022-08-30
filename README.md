@@ -1,5 +1,7 @@
 # News App Updated Version
 
+Please ⭐️ this repo and share it with others.
+
 
 # Description
 The application has been modified and now works using the MVVM 
