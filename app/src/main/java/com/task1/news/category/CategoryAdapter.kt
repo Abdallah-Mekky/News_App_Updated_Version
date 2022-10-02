@@ -51,21 +51,21 @@ class CategoryAdapter(var Category: List<Category?>?) :
 
         return when (viewType) {
 
-            left_Side -> LeftViewHolder(createLeftSide(parent))
-            right_Side -> RightViewHolder(createRightSide(parent))
+            leftSide -> LeftViewHolder(createLeftSide(parent))
+            rightSide -> RightViewHolder(createRightSide(parent))
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
 
-    var left_Side = 10
-    var right_Side = 20
+    var leftSide = 10
+    var rightSide = 20
 
     override fun getItemViewType(position: Int): Int {
 
-        if (position % 2 == 0)
-            return left_Side
+        return if (position % 2 == 0)
+            leftSide
         else
-            return right_Side
+            rightSide
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -109,7 +109,7 @@ class CategoryAdapter(var Category: List<Category?>?) :
         fun onClick(position: Int, Category: Category)
     }
 
-    fun createLeftSide(parent: ViewGroup): LeftSideCategoryBinding {
+    private fun createLeftSide(parent: ViewGroup): LeftSideCategoryBinding {
 
         var itemleftSideCategoryBinding: LeftSideCategoryBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
@@ -122,7 +122,7 @@ class CategoryAdapter(var Category: List<Category?>?) :
 
     }
 
-    fun createRightSide(parent: ViewGroup): RightSideCategoryBinding {
+    private fun createRightSide(parent: ViewGroup): RightSideCategoryBinding {
 
         var itemRightSideCategoryBinding: RightSideCategoryBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),

@@ -2,15 +2,16 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.task1.news"
         minSdk 21
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -33,6 +34,7 @@ android {
     buildFeatures {
         dataBinding true
     }
+    namespace 'com.task1.news'
 }
 
 dependencies {
@@ -42,16 +44,21 @@ dependencies {
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.dagger:hilt-android:2.38.1'
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+
+
 
 
 

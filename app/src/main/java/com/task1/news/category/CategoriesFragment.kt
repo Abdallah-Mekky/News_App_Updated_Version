@@ -6,37 +6,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
 import com.task1.news.R
 import com.task1.news.databinding.FragmentCategoriesBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class CategoriesFragment() : Fragment() {
 
+    private val categoriesViewModel: CategoriesViewModel by viewModels()
+    @Inject lateinit var categoriesAdapter: CategoryAdapter
     lateinit var category: List<Category>
-    lateinit var categoriesViewModel: CategoriesViewModel
     lateinit var fragmentCategoriesBinding: FragmentCategoriesBinding
-    var categories_Adapter: CategoryAdapter = CategoryAdapter(null)
 
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         fragmentCategoriesBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_categories, container, false)
         return fragmentCategoriesBinding.root
-    }
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        categoriesViewModel = ViewModelProvider(this).get(CategoriesViewModel::class.java)
     }
 
 
@@ -46,38 +40,34 @@ class CategoriesFragment() : Fragment() {
         subscribeToLiveData()
         categoriesViewModel.createCategoryList()
         initViews()
-
-
     }
 
     private fun initViews() {
 
-        fragmentCategoriesBinding.categoriesRecyclerView.adapter = categories_Adapter
+        fragmentCategoriesBinding.categoriesRecyclerView.adapter = categoriesAdapter
 
-        categories_Adapter.onItemClickListener = object : CategoryAdapter.OnItemClickListener {
+        categoriesAdapter.onItemClickListener = object : CategoryAdapter.OnItemClickListener {
 
             override fun onClick(position: Int, Category: Category) {
                 onCategoryClick?.onClick(position, Category)
             }
-
         }
     }
 
-    fun subscribeToLiveData() {
+    private fun subscribeToLiveData() {
 
         categoriesViewModel.categoryLiveData.observe(viewLifecycleOwner, Observer { categoryList ->
             category = categoryList
-            categories_Adapter.refreashAdapter(category)
+            categoriesAdapter.refreashAdapter(category)
         })
     }
 
 
     //Callback
-    var onCategoryClick: onCategoryClickListener? = null
+    var onCategoryClick: OnCategoryClickListener? = null
 
-    interface onCategoryClickListener {
+    interface OnCategoryClickListener {
 
         fun onClick(position: Int, Category: Category)
     }
-
 }
