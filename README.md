@@ -30,6 +30,10 @@ https://user-images.githubusercontent.com/80880411/187102119-69377f7c-fcab-4653-
 * [View Model](https://bit.ly/3e43P79) - The View Model class is designed to store and manage UI-related data in a lifecycle conscious way.
 * [Live Data](https://bit.ly/3KuahQR) - LiveData is an observable data holder class. Unlike a regular observable, LiveData is lifecycle-aware, meaning it respects the lifecycle of other app components, such as activities, fragments, or services.
 * [Data Binding](https://bit.ly/3PVsjNc) - The Data Binding Library is a support library that allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically.
+* [Dependency Injection Using Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Hilt is a dependency injection library for Android that reduces the boilerplate of doing manual dependency injection in your project.
+* [Repository Pattern](https://medium.com/swlh/repository-pattern-in-android-c31d0268118c) 
+
+
 
 
 # Network Calls
@@ -38,12 +42,20 @@ https://user-images.githubusercontent.com/80880411/187102119-69377f7c-fcab-4653-
 # Background tasks
 * [Kotlin Coroutines](https://bit.ly/3Kq3ec3) - A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
 
-# Architecture pattern Used
-* [MVVM](https://developer.android.com/jetpack/guide)
+# Code Architecture
+* [MVVM Architecture Pattern](https://developer.android.com/jetpack/guide)
 
 <p align="center">
 
 <img src="https://user-images.githubusercontent.com/86564639/166422026-4a5f4f9b-44b6-44c7-b4c6-852be532b41f.png">
+</p>
+
+* [Clean Architecture](https://developer.android.com/topic/architecture)
+
+
+<p align="center">
+
+![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture.png)
 </p>
 
 
